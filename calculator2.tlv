@@ -11,8 +11,8 @@
    $reset = *reset;
   
   // Just for convinience of checking with smaller numbers
-  $val1[31:0] = {0, $val1_rand[5:0]};
-  $val2[31:0] = {0, $val2_rand[3:0]};
+  $val1[31:0] = {26'b0, $val1_rand[5:0]};
+  $val2[31:0] = {28'b0, $val2_rand[3:0]};
   
   $sum[31:0] = $val1[31:0] + $val2[31:0];
   $diff[31:0] = $val1 - $val2;
