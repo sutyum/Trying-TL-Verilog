@@ -5,6 +5,8 @@
    // Macro providing required top-level module definition, random
    // stimulus support, and Verilator config.
    m4_makerchip_module   // (Expanded in Nav-TLV pane.)
+   // Add visualization macro for calculator
+   m4_include_lib(['https://raw.githubusercontent.com/stevehoover/LF-Building-a-RISC-V-CPU-Core/main/lib/calc_viz.tlv'])
    /* verilator lint_on WIDTH */
 
 \TLV
@@ -28,5 +30,7 @@
    // Assert these to end simulation (before Makerchip cycle limit).
    *passed = *cyc_cnt > 40;
    *failed = 1'b0;
+   
+   m4+calc_viz() // For calculator visualization macro
 \SV
    endmodule
