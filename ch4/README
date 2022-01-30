@@ -1,0 +1,14 @@
+Chapter 4 exercises
+===================
+
+build
+  makerchip filename.tlv
+
+files
+-----
+
+| File               | Purpose                         |
+|--------------------|---------------------------------|
+| pc_exercise1.tlv   | Implement a program counter     |
+| imem_exercise2.tlv | Implement an instruction memory |
+

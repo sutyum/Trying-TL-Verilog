@@ -43,6 +43,9 @@
    
    $reset = *reset;
    
+   $pc[31:0] = $reset ? 32'b0 : $next_pc;
+   $next_pc[31:0] = >>1$pc[31:0] + 1;
+   
    // Assert these to end simulation (before Makerchip cycle limit).
    *passed = 1'b0;
    *failed = *cyc_cnt > M4_MAX_CYC;
